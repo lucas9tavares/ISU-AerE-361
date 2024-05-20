@@ -1,0 +1,74 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+
+\usepackage{adjustbox,lipsum}
+
+\title{Lab 2 Report}
+\date{02-05-2024}
+\author{Lucas Tavares}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section{Command Cheat Sheet}
+
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|p{4.2in}|}
+\hline
+Command & Option & What this command/option combination does \\
+\hline
+\hline
+\texttt{tar} & \texttt{xf} & Tells the computer the extract the file specified \\
+\hline
+\texttt{ls} & \texttt{-l} & List all files in the current directory in a long listing format \\
+\hline
+\texttt{find} & \texttt{*<name>*} & List all files in the current directory which name contains \texttt{<name>} \\
+\hline
+\texttt{wc} & \texttt{-l} & Counts the number of lines in a specified file(s) or command line output \\
+\hline
+\texttt{grep} & \texttt{-l ''<string>'' *} & Print all filenames from the current directory which content contains the specified \texttt{<string>} \\
+\hline
+\texttt{grep} & \texttt{-n ''<string>''} & Print all lines which contains the \texttt{<string>} and prefix it with the line number \\
+\hline
+\texttt{sed} & \texttt{'s/<oldtext>/<newtext>/'} & Changes all of the \texttt{<oldtext>} appearences in a text file with \texttt{<newtext>} \\
+\hline
+\texttt{awk} & \texttt{-F "," '{print $1 " " $2}'} & Read the lines of the file considering '','' is diving the columns, and print the first and second column of each line separated by a space \\
+\hline
+\texttt{git} & \texttt{status} & Ask Git about the status of our current repository \\
+\hline
+\texttt{cd} & \texttt{..} & Change the current directory to its parent directory \\
+\hline
+\end{tabular}
+\end{adjustbox}
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+\begin{itemize}
+    \item{\texttt{man ls}: Found list of options}
+    \item{\texttt{man find}: Found list of options}
+    \item{\url{https://www.cyberciti.biz/faq/bash-while-loop/}: Found on Google}
+    \item{\texttt{man grep}: Found list of options}
+    \item{\texttt{man sed}: Found list of options}
+    \item{\url{https://www.hostinger.com/tutorials/how-to-use-linux-sed-command-examples}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/7857090/extract-specific-columns-from-delimited-file-using-awk}: Found on Google}
+    \item{\texttt{man awk}: Found list of options}
+    \item{\url{https://askubuntu.com/questions/844843/adding-a-new-column-as-line-number-in-a-csv-file}: Found on Google}
+    \item{\url{https://unix.stackexchange.com/questions/548353/how-can-i-stop-the-terminal-from-asking-for-more-pipe-input}: Found on Google}
+    \item{\url{https://unix.stackexchange.com/questions/86321/how-can-i-display-the-contents-of-a-text-file-on-the-command-line}: Found on Google}
+    \item{\url{https://tldp.org/LDP/abs/html/comparison-ops.html}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/28937195/pass-content-from-txt-file-as-argument-for-bash-script}: Found on Google}
+    \item{\url{https://www.unix.com/unix-for-dummies-questions-and-answers/253399-how-use-square-values-shell-scripting.html}: Found on Google}      
+\end{itemize}
+\end{flushleft}
+
+\end{document}
