@@ -13,20 +13,20 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 | --- | --- |
 |**Assigned on**: | Jan. 23, 2024 |
 |**Due on**: | Feb. 30, 2024 |
-|**Accepted on**: | |
+|**Accepted on**: | Feb. 02, 2024 @ 01:16:11 PM |
 
 
 ## Grading Rubric
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Exercise 1 | | 10 |
-| Exercise 2 | | 10 |
-| Exercise 3 | | 10 |
-| Exercise 4 | | 10 |
-| Exercise 5 | | 10 |
-| Report | | 50 |
-| Total Score | | 100 |
+| Exercise 1 | 10 | 10 |
+| Exercise 2 | 10 | 10 |
+| Exercise 3 | 10 | 10 |
+| Exercise 4 | 10 | 10 |
+| Exercise 5 | 10 | 10 |
+| Report | 50 | 50 |
+| Total Score | 100 | 100 |
 
 
 ## Introduction
