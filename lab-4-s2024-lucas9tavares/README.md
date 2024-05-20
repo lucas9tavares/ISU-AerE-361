@@ -20,18 +20,18 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
 | 1. Hello World | 5 | 5 |
-| 2. Integer Types | 5 | 6 |
+| 2. Integer Types | 6 | 6 |
 | 3. Float Types | 3 | 3 |
 | 4. Type Selection | 2 | 2 |
 | 5. Type Errors | 9 | 9 |
 | 6. Hello Function | 10 | 10 |
 | 7. Single Interger Input | 10 | 10 |
 | 8. Multi-Integer Input | 15 | 15 |
-| 9. Variable Char Input | 15 | 20 |
+| 9. Variable Char Input | 20 | 20 |
 | 10.a Naive Sum | 20 | 20 |
 | 10.b Gauss Sum | 20 | 20 |
 | Report | 40 | 40 |
-| Total Score | 154 | 160 |
+| Total Score | 160 | 160 |
 **Always create a branch as a first step!** Creating a branch is one of the most essential best practices for working in a repository. It lets you easily collaborate with larger groups, organize your work, and work in isolation.
 
 **develop**: It is standard practice to do active development on a branch called "develop", as follows:
