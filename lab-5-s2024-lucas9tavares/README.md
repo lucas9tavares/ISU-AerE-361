@@ -22,14 +22,9 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 | Exercise 1 | 25 | 30 |
 | Exercise 2 | 30 | 30 |
 | Exercise 3 | 30 | 30 |
-| Report | 25 | 30 |
-| Total Score | 110 | 120 ||Deliverable | Points Awarded | Maximum Points |
+| Report | 30 | 30 |
+| Total Score | 115 | 120 ||Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Exercise 1 | | 30 |
-| Exercise 2 | | 30 |
-| Exercise 3 | | 30 |
-| Report | | 30 |
-| Total Score | | 120 |
 
 
 
