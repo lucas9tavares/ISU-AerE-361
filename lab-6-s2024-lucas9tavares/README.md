@@ -12,17 +12,11 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Exercise 1 | 5 | 10 |
-| Exercise 2 | 20 | 30 |
+| Exercise 1 | 10 | 10 |
+| Exercise 2 | 30 | 30 |
 | Exercise 3 | 10 | 10 |
 | Exercise 4 | 40 | 50 |
-| Total Score | 75 | 100 ||Deliverable | Points Awarded | Maximum Points |
-|---|---|---|
-| Ex. 1 | | 10 |
-| Ex. 2 | | 30 |
-| Ex. 3 | | 10 |
-| Ex. 4 | | 50 |
-| Total Score | | 100 |
+| Total Score | 90 | 100 |
 
 ## Introduction
 
