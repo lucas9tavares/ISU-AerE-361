@@ -1,0 +1,98 @@
+\documentclass{article}
+
+
+\usepackage{changepage}
+\usepackage{float}
+\usepackage{multirow}
+% To remove paragraph indentation
+\usepackage{parskip}
+% Adds the url command
+\usepackage{hyperref}
+
+
+% Update these:
+\title{Lab 10 Report}
+\date{04-9-2024}
+\author{Lucas Tavares}
+
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+
+\section{Question 1}
+
+\textbf{How does the cache performance and run time of the two solutions differ?} \\
+
+%My original solution actually presented a greater number of misses with 42,507 D1 misses, while the code with the transposed velocity matrix had 28,103 D1 misses. For I1, LLi, LLd, and LL misses, the numbers were the same for both solutions. All of the miss rates, for both codes, euqal 0.0\%. \\
+
+%Analyzing the run time, again, the code with a transverse matrix performed better, with a real time of 0.106s and a user time of 0.060s (difference of 0.046s). On the other hand, my original code performed with real time of 0.144s and user time of 0.063s (difference of 0.081s). \\
+
+%Comparing the misses of the two different codes, the code with a transposed velocity matrix had a considerable amount of D1 misses, while my original code had a small amount, with the D1 miss rate at 0.0\%. When we compare the run time, it is evident how the real and the user time drastically increased for the transposed matrix code compared to the original code. \\
+
+We can observe from the results of the analysis of the cache performance and run time that the solution with transposed matrices had a better cache performance, causing a smaller (faster) run time. \\
+
+
+\section{Question 2}
+
+\textbf{Can you see the impact of the transposition?} \\
+
+%The impact of transposition was not observable on my codes. \\
+
+%The impact of transposition is clearly evident. This is a small code with a considerably small transposed matrix, and still, the difference in performance is observed. \\
+
+The impact of transposition is almost insignificant in these solutions. Even so, it is clear that transposing the matrices reduces cache misses and improves performance. \\
+
+
+\section{Question 3}
+
+\textbf{How would this impact larger programs?} \\
+
+%Reading and writing matrices following the column order (instead of row order) could make larger programs to take a considerable amount of time to be computed (instead of instantly or almost instantly). We aim to write programs that will minimize the amount of time we need to wait to run a program, especially if those programs will be executed in machines that are not as good as our computers. \\
+
+In larger programs, with a larger set of data, the time spend saving the data will increase. The use of transposed matrices in larger programs would help minimize the run time. \\
+
+
+\section{Question 4}
+
+\textbf{Take an educated guess about the big-O complexity of this with and without the transposition.} \\
+
+%Without the transposition, and considering that there are a loop inside another loop so that we can write the information into the matrix, the could would have a complexity of \textit{O($n^2$)}. With the transposition, the code will need to execute one extra action each time the loop is executed (to get to the new row in the same column), so we could estimate that its complexity would be of \textit{O($(n+1)^2$)}.
+
+The solution with transposed matrices have a \textit{O$(n^2)$} complexity, while the solution without transposed matrices have a \textit{O(n)} complexity. \\
+
+
+\newpage
+
+
+\section{Question 5}
+
+\textbf{How much data would you have to process for this to pay off?} \\
+
+%Even at smaller computations as the one we performed we could observe a considerable difference in performance. Thus, it is reasonable to say, that we should always try to avoid writting a code which will outcome a large miss rate. \\
+
+It is clear that tranposing the matrices would payoff for problems with larger data sets. \\
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+  \begin{itemize}
+  \item{Lab manual Chapters 6, 8, and 10.}
+    \item{\texttt{man rm}: Found list of flags}
+    \item{\url{https://stackoverflow.com/questions/45733430/skip-reading-header-of-text-file-in-c}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/22433041/division-in-c-not-giving-expected-value}: Found on Google}
+    \item{\url{https://www.reddit.com/r/C_Programming/comments/tv6dem/double_free_or_corruption_out_what_is_causing/}: Found on Google}
+    \item{\url{https://gcc.gnu.org/onlinedocs/gcc-3.1.1/gcc/Invoking-GCC.html#:~:text=When%20you%20invoke%20GCC%2C%20it,files%20output%20by%20the%20assembler.
+}: Found on Google}
+  \end{itemize}
+\end{flushleft}
+
+
+\end{document}
