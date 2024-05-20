@@ -1,0 +1,48 @@
+\documentclass{article}
+
+
+\usepackage{changepage}
+\usepackage{float}
+\usepackage{multirow}
+% To remove paragraph indentation
+\usepackage{parskip}
+% Adds the url command
+\usepackage{hyperref}
+
+
+% Update these:
+\title{Lab 11 Report}
+\date{04-22-2024}
+\author{Lucas Tavares}
+
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\section{Question 1}
+
+The time complexity for the Naive-Gauss elimination in terms of the number of equations (n) is \textbf{\textit{O($n^3$)}}. Forward elimination of unknowns consists of (n-1) steps. In each step k, the coefficient of the $k^{th}$ unknown will be zeroed from every subsequent equation that follows the $k^{th}$ row. With each step that is conducted, a new matrix is generated until the coefficient matrix is transformed to an upper triangular matrix. To perform this, 3 nested \texttt{for} loops are necessary. Each of these loops worse scenario will loop n times. Thus, the time complexity is \textbf{\textit{O($n^3$)}}.
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+  \begin{itemize}
+  \item{Naïve Gaussian Elimination - Jamie Trahan, Autar Kaw, Kevin Martin}
+  \item{7.3 The Jacobi and Gauss-Seidel Iterative Methods}
+  \item{\texttt{man gdb}: Found list of flags}
+  \item{\url{https://prepinsta.com/all-about-c-language/how-to-print-percentile-using-printf/#:~:text=For%20printing%20'%25'%2C%20there,printf()%20we%20can%20print%20%25.}: Found on Google}
+  \item{\url{https://stackoverflow.com/questions/35690805/undeclared-first-use-in-this-function-in-c}: Found on Google}
+  \item{\url{https://www.cse.unsw.edu.au/~learn/debugging/modules/gdb_viewing_data/#:~:text=Able%20to%20inspect%20variables%20(program,print%20and%20info%20locals%20commands.&text=In%20order%20to%20check%20where,allow%20us%20to%20do%20this.}: Found on Google}
+  \item{\url{https://stackoverflow.com/questions/37229811/warning-useless-storage-class-specifier-in-empty-declaration-in-struct}: Found on Google}
+  \end{itemize}
+\end{flushleft}
+
+
+\end{document}
