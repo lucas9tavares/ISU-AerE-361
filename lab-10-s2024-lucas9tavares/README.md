@@ -19,10 +19,10 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Data Import | 15 | 20 |
-| Computing the Curl | 10 | 30 |
-| Cache Impact | 10 | 25 |
-| Total Score | 35 | 75 || Total Score | | 75 |
+| Data Import | 20 | 20 |
+| Computing the Curl | 30 | 30 |
+| Cache Impact | 25 | 25 |
+| Total Score | 75 | 75 || Total Score | | 75 |
 
 ## Introduction
 
