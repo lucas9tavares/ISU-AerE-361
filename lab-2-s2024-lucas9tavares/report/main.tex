@@ -1,0 +1,126 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+
+% Update these:
+\title{Lab 2 Report}
+\date{01-29-2024}
+\author{Lucas Tavares}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Exercise 1}
+Using the \texttt{ls} to list the files in order of time I found out the most recent file modified in the lab directory was \texttt{check.sh}, which name I've written into \texttt{latest-file.info}. The directory \texttt{report}, showed up prior to \texttt{check.sh} (since I just modified \texttt{main.tex} and generated \texttt{main.pdf}, but since it is a directory and not a file, I disconsidered it.
+
+
+Command:\\
+\texttt{ls -l -t}\\
+\texttt{emacs latest-file.info}
+
+Disphering output:\\
+From the output I looked at columns 6-9 because 6-8 says when the file was created/last modified and column 9 says the file name.
+
+Options used:
+\begin{itemize}
+    \item{\texttt{-l} shows more information per file}
+    %  ? is not the actual option, need to find it your self...
+    \item{\texttt{-t} orders the files by modification time}
+\end{itemize}
+
+Sources of informtion:
+\begin{itemize}
+    \item{\texttt{ls --help}: Found list of options}
+    \item{\url{https://www.tutorialspoint.com/how-to-list-the-last-five-modified-files-in-linux#:~:text=Using%20ls%20Command&text=The%20%2Dt%20option%20sorts%20the,modified%20file%20at%20the%20top.}: Found on Google}
+\end{itemize}
+
+\newpage
+\section{Exercise 2}
+Using \texttt{ls} and \texttt{wc} connected with a pipe ( \texttt{|} ) I listed all items in my lab directory and counted the number of words on that list.
+
+Command:\\
+\texttt{ls -A | wc -w}\\
+\texttt{emacs count.info}
+
+Disphering output:\\
+The output showed me the number of words on the list of all items in my lab directory. This number represents how many objects there are on my lab directory.
+
+Options used:
+\begin{itemize}
+    \item{\texttt{-A} instructs \texttt{ls} to list all items, including hidden files}
+    \item{\texttt{-w} tells \texttt{wc} to count words}
+\end{itemize}
+
+Sources of informtion:
+\begin{itemize}
+    \item{\url{https://kodekloud.com/blog/file-count-in-directory-linux/#:~:text=The%20wc%20command%20stands%20for,number%20of%20files%20and%20directories.}: Found on Google}
+\end{itemize}
+
+\newpage
+\section{Exercise 3}
+Using \texttt{whereis} I could discover the full path to the \texttt{ls} library.
+
+Command:\\
+\texttt{whereis -b ls}\\
+\texttt{emacs ls.info}
+
+Disphering output:\\
+The output gave me the full path to the binary of the program ls.
+
+Options used:
+\begin{itemize}
+    \item{-b} search only for binaries
+\end{itemize}
+
+Sources of informtion:
+\begin{itemize}
+    \item{\texttt{whereis --help}: Found list of options}
+\end{itemize}
+
+\newpage
+\section{Exercise 4}
+Using \texttt{find} I was able to find all the files with the name ``readme.txt'' in the whole Linux file systems which I had permission to access.
+
+Command:\\
+\texttt{find / -iname "readme.txt" -print 2>/dev/null}\\
+\texttt{emacs find.info}
+
+Disphering output:\\
+The output displayed a list of the paths where there is a file named ``readme.txt''. It was also not displaying the paths which I didn't have permission granted to access. 
+
+Options used:
+\begin{itemize}
+    \item{\texttt{-iname} tells \texttt{find} what is the file name we are looking for, case insensitive}
+    \item{\texttt{-print} print the full path with the file name on the standard output}
+    \item{\texttt{2>/dev/null} tells my shell to redirect the permission denied messages (error messages) to /dev/null, hidding them}
+\end{itemize}
+
+Sources of informtion:
+\begin{itemize}
+    \item{\texttt{man find}: Found list of options}
+    \item{\url{https://www.hostinger.com/tutorials/how-to-use-find-and-locate-commands-in-linux/#:~:text=There%20are%20two%20Linux%20commands,only%20on%20your%20Linux%20database.}: Found on Google}
+    \item{\url{https://www.cyberciti.biz/faq/bash-find-exclude-all-permission-denied-messages/}: Found on Google}
+\end{itemize}
+
+\newpage
+\section{Exercise 5}
+Using \texttt{htop} I was able to visualize the live information about running programs, CPU and memory usage.
+
+Command:\\
+\texttt{htop}\\
+\texttt{emacs taskmanager.info}
+
+Disphering output:\\
+The output is a program which displays useful live updated information about your computer, system, and programs, such as CPU and memory usage and running programs. It is a program really similar to Windows' Task Manager.
+
+Sources of informtion:
+\begin{itemize}
+    \item{\url{https://www.javatpoint.com/linux-task-manager#:~:text=If%20we%20wish%20for%20a,well%20as%20it%20appears%20good.}: Found on Google}
+\end{itemize}
+
+\end{document}
