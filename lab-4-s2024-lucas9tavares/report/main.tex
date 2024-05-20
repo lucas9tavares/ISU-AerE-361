@@ -1,0 +1,121 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+
+\usepackage{adjustbox,lipsum}
+
+% Update these:
+\title{Lab 4 Report}
+\date{02-12-2024}
+\author{Lucas Tavares}
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\section{C Commands Cheat Sheet}
+
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|}
+\hline
+Command & What this command/function/compiler option/pattern does \\
+\hline
+\hline
+\texttt{printf()} & Outputs text, variables, and combinations of both \\
+\hline
+\texttt{\#include<libraryname>} & Include libraries of functions to your script \\
+\hline
+\texttt{float <variable> = <value>} & Defines a variable as a decimal number and assign a value to it \\
+\hline
+\texttt{int <function>(<parameters>)} & Creates a function, defines it as an integer, and assign its parameters to variables \\
+\hline
+\texttt{gcc -o script script.c} & Compiles script.c as an executable file named script (compiler) \\
+\hline
+\texttt{if ( <condition> )} & Execute the following lines of code if and only if the conditions are met \\
+\hline
+\texttt{for ( int i = 0; i < n; ++i )} & Create a loop that will repeat the following lines of code n times \\
+\hline
+\texttt{break} & Force a loop to stop \\
+\hline
+\texttt{scanf(''\%s'', <variable>)} & Collect user input and assign it to a variable \\
+\hline
+\texttt{time} & Execute a program and list time and resources taken to complete running it (bash) \\
+\hline
+
+\end{tabular}
+\end{adjustbox}
+
+
+\newpage
+
+\section{Exercise 5}
+
+\begin{itemize}
+    \item{The compiler reported the following error: \texttt{error: expected ‘,’ or ‘;’ before ‘printf’} . The error is telling us that the previous line wasn't correctly ended, therefore the computer can't process the following line. To fix this error, simply insert the missing \texttt{;} at the end of the previous line. The code was successfuly compiled, however, the output of the code is showing \texttt{Result: 178}, which is not the value we expected (690). To get the correct value, we should use \texttt{short sum = a + b} in line 2, this way you are assigning \texttt{sum} variable to a type which can store a larger number. The maximum value \texttt{unsigned char} can store is 255, and \texttt{short} can store integers up to 32,767. Now, running the code outputs the value we expected.}
+    \item{Again, te compiler reported the following error: \texttt{error: expected ‘,’ or ‘;’ before ‘printf’} . The error is telling us that the previous line wasn't correctly ended, therefore the computer can't process the following line. To fix this error, simply insert the missing \texttt{;} at the end of the previous line. The code was successfuly compiled, however, the output of the code is showing \texttt{Result: 0}, which is not the value we expected (0.1). There are two problems with the code. The first one, we need to assign \texttt{div} to a type that stores decimal numbers, so substitute \texttt{unsigned int} by \texttt{float}. Next, we need to tell printf that the variable he is printing is a floating number. For that, substitute \texttt{\%d} by \texttt{\%0.1f}. That extra \texttt{0.1} is telling printf how many decimal cases the number should have (in this case, 1). Now, running the code outputs the value we expected.}
+    \item{Copiming the code did not report any error. However, the output was \texttt{3.60000000000000008882} (not what we expected). In order to fix its precision, I tried many different possibles solutions, none was successful. Thus, to print \texttt{3.60000000000000000000}. I created a character string using \texttt{char number[] = ''3.60000000000000000000'';}, and printed using \texttt{printf(''\%s $\backslash$n'', number)}, resulting in the desired output being printed.}
+\end{itemize}
+
+
+\newpage
+
+\section{Exercise 10}
+
+From the output of the time command, it is reasonable to say that both of the programs perform almost instantly. This similarity might be due to the simplicity of the problem (and consequently of the code and its loops). Using a bash script and ''automated'' user input, all of the measured times came out to as zero.
+
+Using the Gaussian method, we can find the sum of all numbers in between 1 and \textit{n} by coding its equation
+
+\begin{center} $\sum_{j=1}^n$ $=$ $\frac{n(n + 1)}{2}$   as   \texttt{int sum = n * (n + 1) / 2;} \end{center}
+
+The time complexity of \texttt{GaussAdder()} is \textit{O(1)}, since it doesn't pocess any loop in its code, just a simple algebric equation. Independent of the value of n, the function runs in constant time.
+
+On the other hand, \texttt{BruteForceAdder()} needs to perform the entire summation of the numbers between 1 and \textit{n}, one by one. To do so, a loop was created to repeat the following equation from \texttt{i = 0} to \texttt{i = n - 1}:
+
+\begin{center} $Sum_{new}$ $=$ $Sum_{old}$ $+$ $(i + 1)$ \end{center}
+
+where $Sum_{0} = 0$ and it loops \textit{n} times. \texttt{BruteForceAdder()} has a time complexity of \textit{O(n)}, thus its performace grow lineraly directly proportioal to the size of n. Considering it has one loop in its code, this loop will iterate n times. 
+
+\bigskip
+
+\begin{center} \begin{tabular}{|c|r|r|}
+\hline
+$n$ & Brute Force Time (s) & Gauss Adder Time (s) \\
+\hline
+\hline
+1 & 0.00 & 0.00\\ \hline
+10 & 0.00 & 0.00\\ \hline
+100 & 0.00 & 0.00\\ \hline
+1000 & 0.00 & 0.00\\ \hline
+100000 & 0.00 & 0.00\\ \hline
+\end{tabular} \end{center}
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+\begin{itemize}
+    \item{\url{https://www.geeksforgeeks.org/g-fact-41-setting-decimal-precision-in-c/}: Found on Google}
+    \item{\url{https://tex.stackexchange.com/questions/280924/how-to-insert-symbol-in-a-statement-without-intending-comment}: Found on Google}
+    \item{\url{http://www.emerson.emory.edu/services/latex/latex_155.html#:~:text=A%20%5C%20is%20produced%20by%20typing%20%24%5Cbackslash%24%20in%20your%20file.}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/4072190/check-if-input-is-integer-type-in-c}: Found on Google}
+    \item{\url{https://www.programiz.com/c-programming/c-if-else-statement}: Found on Google}
+    \item{\url{https://www.geeksforgeeks.org/isalpha-isdigit-functions-c-example/}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/44196725/format-d-expects-argument-of-type-int-but-argument-2-has-type-int}: Found on Google}
+    \item{\url{https://www.geeksforgeeks.org/c-program-for-char-to-int-conversion/}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/16508817/how-do-i-provide-input-to-a-c-program-from-bash}: Found on Google}
+    \item{\url{https://ctan.mirrors.hoobly.com/info/latexcheat/latexcheat/latexsheet.pdf}: Found on Google}      
+    \item{\texttt{man time}: Found list of options}
+    \item{\url{https://tex.stackexchange.com/questions/135134/how-to-add-an-empty-line-between-paragraphs}: Found on Google}      
+\end{itemize}
+\end{flushleft}
+
+
+\end{document}
