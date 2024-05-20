@@ -20,11 +20,11 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Basic Branch | 0 | 5 |
-| Grok Git | 0 | 5 |
-| Master Markdown | 0 | 5 |
-| Learn LaTeX | 0 | 5 |
-| Total Score | 0 | 20 |
+| Basic Branch | 5 | 5 |
+| Grok Git | 5 | 5 |
+| Master Markdown | 5 | 5 |
+| Learn LaTeX | 5 | 5 |
+| Total Score | 20 | 20 |
 
 
 ## _**Please follow the Lab Manual step-by-step**_
