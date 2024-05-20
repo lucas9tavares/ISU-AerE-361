@@ -1,0 +1,145 @@
+\documentclass{article}
+
+
+\usepackage{changepage}
+\usepackage{float}
+\usepackage{multirow}
+% To remove paragraph indentation
+\usepackage{parskip}
+% Adds the url command
+\usepackage{hyperref}
+
+
+% Update these:
+\title{Lab 9 Report}
+\date{04-2-2024}
+\author{Lucas Tavares}
+
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\section{Question 1}
+
+\begin{table}[H]
+  \begin{adjustwidth}{-4cm}{-4cm}
+  \centering
+  \caption{Binary Integer Ranges}
+  \label{table:Question1}
+  \begin{tabular}{|c|c|c|c|c|} %NOTE: These are "ell" for "left alignment"
+                         %You could also use "c" for "center" or "p" for "paragraph"-
+                         % see the manual for many other options!
+    \hline
+    \multirow{2}{*}{} & \multicolumn{2}{c}{Unsigned} & \multicolumn{2}{|c|}{Signed} \\
+    \hline
+    Size & Min. Value & Max. Value & Min. Value & Max. Value \\
+    \hline
+    8-bit & 0 & 255 & -128 & 127 \\
+    \hline
+    16-bit & 0 & 65,535 & -32,768 & 32,767 \\
+    \hline
+    32-bit & 0 & 4,294,967,295 & -2,147,483,648 & 2,147,483,647 \\
+    \hline
+    64-bit & 0 & 18,446,744,073,709,551,615 & -9,223,372,036,854,775,808 & 9,223,372,036,854,775,807 \\
+    \hline
+  \end{tabular}
+  \end{adjustwidth}
+\end{table}
+
+
+\section{Question 2}
+
+88 = 01011000 \\
+0 = 00000000 \\
+1 = 00000001 \\
+127 = 01111111 \\
+255 = 11111111 \\
+
+
+\section{Question 3}
+
++88 = 01011000 \\
+-44 = 11010100 \\
+-1 = 11111111 \\
+0 = 00000000 \\
++1 = 00000001 \\
+-128 = 10000000 \\
++127 = 01111111 \\
+
+
+\section{Question 4}
+
+Smallest number: 1.17549435e-38 (decimal) = 00000000100000000000000000000000 (binary) \\
+Largest number: 3.4028235e38 (decimal) = 01111111011111111111111111111111 (binary) \\
+
+
+\newpage
+
+\section{Question 5}
+
+Smallest number: -3.4028235e38 (decimal) = 11111111011111111111111111111111 (binary) \\
+Largest number: -1.17549435e-38 (decimal) = 10000000100000000000000000000000 (binary) \\
+
+
+\section{Question 6}
+
+Smallest number: 1.4e-45 (decimal) = 00000000000000000000000000000001 (binary) \\
+Largest number: 1.1754942e-38 (decimal) = 00000000011111111111111111111111 (binary) \\
+
+
+\section{Question 7}
+
+Smallest number: -1.1754942e-38 (decimal) = 10000000011111111111111111111111 (binary) \\
+Largest number: -1.4e-45 (decimal) = 10000000000000000000000000000001 (binary) \\
+
+
+\section{Question 8}
+
+Smallest number: 2.2250738585072014e-308 (decimal) = \\ 0000000000010000000000000000000000000000000000000000000000000000 (binary) \\
+\\
+Largest number: 1.7976931348623157e308 (decimal) = \\ 0111111111101111111111111111111111111111111111111111111111111111 (binary) \\
+
+
+\section{Question 9}
+
+Smallest number: -1.7976931348623157e308 (decimal) = \\ 1111111111101111111111111111111111111111111111111111111111111111 (binary) \\
+\\
+Largest number: -2.2250738585072014e-308 (decimal) = \\ 1000000000010000000000000000000000000000000000000000000000000000 (binary) \\
+
+
+\section{Question 10}
+
+Smallest number: 4.9e-324 (decimal) = \\ 0000000000000000000000000000000000000000000000000000000000000001 (binary) \\
+\\
+Largest number: 4.4501477170144023e-308 (decimal) = \\ 0000000000011111111111111111111111111111111111111111111111111111 (binary) \\
+
+
+\section{Question 11}
+
+Smallest number: -4.4501477170144023e-308 (decimal) = \\ 1000000000011111111111111111111111111111111111111111111111111111 (binary) \\
+\\
+Largest number: -4.9e-324 (decimal) = \\ 1000000000000000000000000000000000000000000000000000000000000001 (binary) \\
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+\begin{itemize}
+    \item{\url{https://devhints.io/bash}: Found on Google}
+    \item{\url{https://www.prepbytes.com/blog/c-programming/c-program-to-find-number-of-digits-in-an-integer/}: Found on Google}
+    \item{\url{https://www.rapidtables.com/convert/number/binary-to-decimal.html}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/10162465/implicit-declaration-of-function-itoa-is-invalid-in-c99}: Found on Google}
+    \item{\url{https://www.strudel.org.uk/itoa/}: Found on Google}
+    \item{\url{https://tex.stackexchange.com/questions/388250/how-to-center-the-table}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/13600204/checking-if-argvi-exists-c}: Found on Google}
+\end{itemize}
+\end{flushleft}
+
+
+\end{document}
