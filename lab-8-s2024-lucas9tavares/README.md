@@ -19,12 +19,12 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
 | Integration Header | 5 | 5 |
-| Integration Makefile | 0 | 5 |
-| Integration Struct | 2 | 5 |
+| Integration Makefile | 5 | 5 |
+| Integration Struct | 5 | 5 |
 | CSV Makefile | 10 | 10 |
-| CSV Matrix Parser | 1 | 15 |
+| CSV Matrix Parser | 0 | 15 |
 | Report | 10 | 10 |
-| Total Score | 28 | 50 || Total Score | | 50 |
+| Total Score | 35 | 50 || Total Score | | 50 |
 
 ## Introduction
 
