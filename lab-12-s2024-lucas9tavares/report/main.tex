@@ -1,0 +1,49 @@
+\documentclass{article}
+
+
+\usepackage{changepage}
+\usepackage{float}
+\usepackage{multirow}
+% To remove paragraph indentation
+\usepackage{parskip}
+% Adds the url command
+\usepackage{hyperref}
+
+
+% Update these:
+\title{Lab 12 Report}
+\date{05-06-2024}
+\author{Lucas Tavares}
+
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\section{Complexity Analysis}
+
+The complexity of the Kirchhoff solver in terms of the number of resistors (n) is \textbf{\textit{O(n)}}.
+
+
+\section{Loop Analysis}
+
+The major loop contributing to the complexity of the Kirchhoff solver code is the one populating the conductance matrix and and solving the system of equations. Its invariant is that each resistor's conductance contributes to the elements of the conductance matrix. The loop reaponsible for reading the input file also contributes to the complexity, but with a smaller impact compared to the one previously cited. The invariant of it is that it iterates over each line of the CSV file and extracts resistor information. Lastly, the loop which prints the current values int the correct format to ans.csv doesn't have a significant contribution to the complexity.
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+  \begin{itemize}
+  \item{\url{https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf}: GSL Manual}
+  \item{\texttt{man gdb}: Found list of commands}
+  \item{\url{https://stackoverflow.com/questions/74919686/solving-a-rectangular-system-of-nonlinear-equations-with-gsl}: Found on Google}
+  \end{itemize}
+\end{flushleft}
+
+
+\end{document}
