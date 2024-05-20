@@ -12,19 +12,13 @@
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Exercise 1 - Binary/Decimal Conversion | 0 | 50 |
+| Exercise 1 - Binary/Decimal Conversion | 50 | 50 |
 | Exercise 2 - Report Questions | 50 | 50 |
-| Exercise 3 - Floating Point | 0 | 100 |
-| Exercise 3 - Quadratic Equation | 0 | 100 |
-| Exercise 4 - Difference Sequence | 0 | 100 |
-| Total Score | 50 | 400 ||Deliverable | Points Awarded | Maximum Points |
-|---|---|---|
-| Exercise 1 - Binary/Decimal Conversion | | 50 |
-| Exercise 2 - Report Questions | | 50 |
-| Exercise 3 - Floating Point | | 100 |
-| Exercise 4 - Quadratic Equation | | 100 |
-| Exercise 5 - Difference Sequence | | 100 |
-| Total Score | | 400 |
+| Exercise 3 - Floating Point | 100 | 100 |
+| Exercise 3 - Quadratic Equation | 100 | 100 |
+| Exercise 4 - Difference Sequence | 100 | 100 |
+| Total Score | 360 | 400 |
+
 
 ## Introduction
 
