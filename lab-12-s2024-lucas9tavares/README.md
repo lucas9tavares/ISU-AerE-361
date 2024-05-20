@@ -11,15 +11,15 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 | --- | --- |
 |**Assigned on**: | Apr. 23, 2024 |
 |**Due on**: | May 8, 2024 @ 11:00 |
-|**Accepted on**: | |
+|**Accepted on**: | May. 09, 2024 @ 09:02:30 AM |
 
 ## Grading Rubric
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Circuit Solver | | 40 |
-| Report | | 20 |
-| Total Score | | 60 |
+| Circuit Solver | 15 | 20 |
+| Report | 7 | 10 |
+| Total Score | 22 | 30 |
 
 ## Introduction
 
