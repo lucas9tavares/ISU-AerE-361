@@ -11,17 +11,17 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 | --- | --- |
 |**Assigned on**: | Apr. 11, 2024 |
 |**Due on**: | Apr. 23, 2024 |
-|**Accepted on**: | |
+|**Accepted on**: | Apr. 27, 2024 @ 04:37:30 PM |
 
 
 ## Grading Rubric
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Naive-Gauss Complexity (report) | | 15 |
-| Gauss-Jordan Solver | | 15 |
-| Gauss-Seidel Solver | | 45 |
-| Total Score | | 75 |
+| Naive-Gauss Complexity (report) | 15 | 15 |
+| Gauss-Jordan Solver | 15 | 15 |
+| Gauss-Seidel Solver | 39 | 45 |
+| Total Score | 69 | 75 |
 
 ## Introduction
 
