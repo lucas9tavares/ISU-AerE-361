@@ -1,0 +1,124 @@
+\documentclass{article}
+
+
+% To remove paragraph indentation
+\usepackage{parskip}
+
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+% Adds the url command
+\usepackage{hyperref}
+
+
+% Update these:
+\title{Lab 6 Report}
+\date{02-26-2024}
+\author{Lucas Tavares}
+
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\section{Algorithm and Design}
+
+\begin{algorithm}
+
+  \caption{Algorithm to evaluate the Maclaurin series}
+
+    \begin{algorithmic}
+
+      \Statex \Comment {Required variables:}
+      \State ittr = 0  number to power x by, and number of terms added (int)
+      \State x = ?  number that will be evaluated in the Maclaurin series, received as user input (double)
+      \State ans = 0  approximated value of exp(x), answer (double)
+      \State err = ?  relative error, received as user input (double)
+      \State newTerm = 1000  new term to be added to the sum (double)
+      \State fact = 1  factorial value, working memory (long)
+      \State n = 1 or ittr  number to factorial (int)
+
+      \Statex \Comment {Import CheckNum function code from previous code, adapt to check if number is a real number}
+
+      \State scanf( Enter a value for x:  )
+      
+      \If {CheckNum(x) == 1}
+        \State Invalid x, exit with error
+        \State return 1
+      \EndIf
+
+      \State scanf( Enter a value for relative error:  )
+
+      \Statex \Comment {After collecting x and err from user, and checking if x is valid, start calculating the Maclaurin series}
+
+      \Statex \Comment {Loop while the the new term is greater than the relative error (Loop 1)}
+      \While { newTerm $>$ err }
+
+%        \Statex \Comment {Loop over decreasing n from initial n to 1 (Loop 2)}
+%        \State fact = 1
+%        \State n = ittr
+%        \While { n > 0 }
+%          \State fact = fact * n
+%          \State n = n - 1
+%        \EndWhile
+
+        \If {ittr == 0}
+          \State n = 1
+        \Else
+          \State n = ittr
+        \EndIf
+
+        \State fact = fact * n
+
+        \State newTerm = pow(x,ittr) / fact
+        \State ans = ans + newTerm
+
+        \State ittr = ittr + 1
+
+      \EndWhile
+
+      \State printf( After ittr terms in the series, exp(x) is approx. ans with an error of err )
+
+      \State return 0
+
+    \end{algorithmic}
+
+\end{algorithm}
+
+
+\newpage
+
+\section{Labeled Loops}
+
+\begin{itemize}
+  \item \textbf{Loop 1:} The loop is responsible for calculating the sum of terms until the new term is greater than the relative error stablished by the user. Each time it loops, fact is multiplied by ittr, newTerm change, the new newTerm is added to ans, and ittr increases + 1. Nothing is constant. \\
+%  \item \textbf{Loop 2:} The inner loop is responsible for calculating the factorial that is used in the newTerm calculation. Each time the outer loop repeats, loop 2 repeats itself 1 extra time. Each iteration fact is multiplied by n and n is subtracted by 1. The loop don't repeat when n = 0.
+\end{itemize}
+
+\section{Complexity}
+
+To make the algorithm more efficient, I simplified it to have a single loop (it is not necessary to have a separate loop to calculate the factorial), just the necessary to evaluate the Maclaurin series. In the case where the code terminates with an error (if the user inputs an invalid value for \texttt{x}), the overall cost of algorithm will be 10 * d (10 operations will be executed if \texttt{CheckNum == 1} (if the user input is invalid)). On the other hand, if the algorithm executes normally, the overall cost will be (17 * d) + [7 * (\texttt{ittr} + 1) * d]. The first term refers to the number of operations outside the while loop, and the second term are the operations in the while loop, which will iterate \texttt{ittr} + 1 times.
+
+The performance of this algorithm will grow linearly and in direct proportion to the size of the number of iterations \texttt{ittr} + 1. Thus, the Big O time complexity of the Maclaurin series evaluation code is \textit{O(n)}.
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+\begin{itemize}
+  \item{\url{https://ctan.mirrors.hoobly.com/info/latexcheat/latexcheat/latexsheet.pdf}: Recommended in the lab manual}
+  \item{\url{https://www.w3schools.com/c/c_while_loop.php}: Found on Google}
+  \item{\url{https://www.programiz.com/c-programming/library-function/math.h/fabs#:~:text=double%20fabs%20(double%20x)%3B,number%20(also%20in%20double%20).&text=To%20find%20absolute%20value%20of,convert%20the%20number%20to%20double.}: Found on Google}
+  \item{\url{https://www.geeksforgeeks.org/atol-atoll-and-atof-functions-in-c-c/}: Found on Google}
+  \item{\url{https://www.programiz.com/c-programming/library-function/math.h/pow}: Found on Google}
+  \item{\url{https://www.symbolab.com/solver/series-calculator/%5Csum_%7Bn%3D0%7D%5E%7B22%7D%5Cfrac%7B22%7D%7Bn!%7D%20?or=input}: Used to check the outputs for Exercise 1}
+\end{itemize}
+\end{flushleft}
+
+
+\end{document}
