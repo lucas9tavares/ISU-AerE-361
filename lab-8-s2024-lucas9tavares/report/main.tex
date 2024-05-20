@@ -1,0 +1,52 @@
+\documentclass{article}
+
+
+% To remove paragraph indentation
+\usepackage{parskip}
+% Adds the url command
+\usepackage{hyperref}
+
+% Update these:
+\title{Lab 8 Report}
+\date{03-18-2024}
+\author{Lucas Tavares}
+
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\section{Complexity Analysis}
+
+For the \texttt{csvparse} code, the complexity will be of \textit{O(n*m)}, where n is the number of rows and m is the number of columns in the .csv file. We can conclude that coonsidering the nested loops iterating to create and print each element of the matrix.
+
+\section{Loop Analysis}
+
+The major loops contributing to complexity are the \texttt{while} loop that iterates over each row of the .csv file and the \texttt{for} loop (nested within tthe first one) that iterates over each column for each row, while constructing the matrix. The first loop runs \texttt{l} (number of rows) times, and the second loop runs \texttt{row1NumFields} times.
+
+The \texttt{while} loop iterates over each row of the .csv file until there are no more rows to process, and the \texttt{for} loop iterates over each column of the current row until all columns are processed.
+
+The loop used for dynamically allocating memory for the matrix does not contribute significantly to the complexity of the code.
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+\begin{itemize}
+    \item{\url{https://www.gnu.org/software/make/}: Provided in the lab manual}
+    \item{\url{https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions}: Provided in the lab manual}
+    \item{\url{https://en.wikipedia.org/wiki/Include_guard}: Provided in the lab manual}
+    \item{\url{https://stackoverflow.com/questions/16831605/strange-compiler-warning-c-warning-struct-declared-inside-parameter-list}: Found on Google}
+    \item{\url{https://en.wikipedia.org/wiki/Comma-separated_values}: Provided in the lab manual}
+    \item{\url{https://www.tutorialspoint.com/c_standard_library/c_function_atof.htm}: Found on Google}
+    \item{\url{https://beginnersbook.com/2014/01/2d-arrays-in-c-example/}: Found on Google}
+\end{itemize}
+\end{flushleft}
+
+
+\end{document}

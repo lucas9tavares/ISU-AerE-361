@@ -1,0 +1,105 @@
+Usage Example
+#include <stdio.h>
+
+#include "csvparser.h"
+
+int main() {
+    int i =  0;
+    //                                   file, delimiter, first_line_is_header?
+    CsvParser *csvparser = CsvParser_new("Book1.csv", ",", 1);
+    CsvRow *row;
+    const CsvRow *header = CsvParser_getHeader(csvparser);
+
+    if (header == NULL) {
+        printf("%s\n", CsvParser_getErrorMessage(csvparser));
+        return 1;
+    }
+    const char **headerFields = CsvParser_getFields(header);
+    for (i = 0 ; i < CsvParser_getNumFields(header) ; i++) {
+        printf("TITLE: %s\n", headerFields[i]);
+    }
+    while ((row = CsvParser_getRow(csvparser)) ) {
+        printf("NEW LINE:\n");
+        const char **rowFields = CsvParser_getFields(row);
+        for (i = 0 ; i < CsvParser_getNumFields(row) ; i++) {
+            printf("FIELD: %s\n", rowFields[i]);
+        }
+        CsvParser_destroy_row(row);
+    }
+    CsvParser_destroy(csvparser);
+    return 0;
+}
+API
+/*
+Create a new instance of CsvParser, that parses a file
+Returns an instance of CsvParser
+
+filePath -  relative/absolute path to CSV file
+delimiter - pointer to a single char to be considered as delimiter. If NULL is passed, using default, which is a comma (,) char
+firstLineIsHeader - Use 0 for start reading rows from the first line. Use non-zero value for starting to read rows from the second line
+*/
+CsvParser *CsvParser_new(const char *filePath, const char *delimiter, int firstLineIsHeader);
+
+/*
+Create a new instance of CsvParser, that parses a given string
+Returns an instance of CsvParser
+
+csvString - String that contains CSV formatted text, to be parsed
+delimiter - pointer to a single char to be considered as delimiter. If NULL is passed, using default, which is a comma (,) char
+firstLineIsHeader - Use 0 for start reading rows from the first line. Use non-zero value for starting to read rows from the second line
+*/
+CsvParser *CsvParser_new_from_string(const char *csvString, const char *delimiter, int firstLineIsHeader);
+
+/*
+Get the next row from the CSV
+Returns an instance of CsvRow, or NULL in case of EOF or error
+
+csvParser - an instance of CsvParser
+*/
+CsvRow *CsvParser_getRow(CsvParser *csvParser);
+
+/*
+Get the first row of the file. Works only if CsvParser was initialized with firstLineIsHeader != 0
+Returns an instance of CsvRow, or NULL in case of EOF or error
+
+csvParser - an instance of CsvParser
+*/
+const CsvRow *CsvParser_getHeader(CsvParser *csvParser);
+
+/*
+Get number of fields in given row
+Returns an integer than indicates number of fields in the row
+
+csvRow - an instance of CsvRow
+*/
+int CsvParser_getNumFields(const CsvRow *csvRow);
+
+/*
+Get array of all fields in given row
+Returns an array of c-strings
+
+csvRow - an instance of CsvRow
+*/
+const char **CsvParser_getFields(const CsvRow *csvRow);
+
+/*
+Get the error message, for the last occurred error
+Returns an c-string
+
+csvParser - an instance of CsvParser
+*/
+const char* CsvParser_getErrorMessage(CsvParser *csvParser);
+
+/*
+Destroy and release memory of a CsvParser instance
+
+csvParser - an instance of CsvParser
+*/
+void CsvParser_destroy(CsvParser *csvParser);
+
+/*
+Destroy and release memory of a CsvRow instance
+
+csvRow - an instance of CsvRow
+*/
+void CsvParser_destroy_row(CsvRow *csvRow);
