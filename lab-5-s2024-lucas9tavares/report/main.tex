@@ -1,0 +1,151 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+\usepackage{listings}
+\lstset{
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true
+}
+
+% Update these:
+\title{Lab 5 Report}
+\date{02-19-2024}
+\author{Lucas Tavares}
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\section{Exercise 1}
+
+\textbf{Problem:} Write a C program that asks the user for a file name, atempt to open the file, if it doesn't exists, return 1, print an error message, and end the program. If it exists, read the first 3 lines of the file and print them to the screen, return 0. \\
+
+\textbf{Design:}
+\begin{lstlisting}[numbers=none]
+/* Using char, printf, and scanf, reserve a variable named filename, prompt the user for a file name, and assign it to the variable filename. */
+
+/* Reserve variable file as a FILE, attempt to open the file, use if statement to check if file == NULL and return 1 and print an error message. */
+
+/* In a else statement, use a for loop to get and print the first 3 lines of the file, use getline() function, close file. */
+
+/* Return 0 if all went well. */
+\end{lstlisting}
+\hfill \break
+\textbf{Complexity:} This program had a single \texttt{for} loop which repeated 3 times, thus the complexity of this algorithm was O(3). This program did not have inputed matrices.
+
+
+\newpage
+
+\textbf{Problem:} Write a C program that asks the user for a file name, atempt to open the file, if it doesn't exists, return 1, print an error message, and end the program. If it exists, read the last 3 lines of the file and print them to the screen, return 0. \\
+
+\textbf{Design:} 
+\begin{lstlisting}[numbers=none]
+/* Using char, printf, and scanf, reserve a variable named filename, prompt the user for a file name, and assign it to the variable filename. */
+
+/* Reserve variable file as a FILE, attempt to open the file, use if statement to check if file == NULL and return 1 and print an error message. */
+
+/* In a else statement, use a while loop to get the last 3 lines of the file until fgets() == NULL, use fgets() function to save the lines content to a matrix of 3 rows and MAXLINE columns (each line content to a row), printf each of the 3 last lines, close file. */
+
+/* Return 0 if all went well. */
+\end{lstlisting}
+\hfill \break
+\textbf{Complexity:} This program had a single \texttt{while} loop which repeated \texttt{numLines} times (variable that represents the number of lines in the file), thus the complexity of this algorithm was O(\texttt{numLines}). This program did not have inputed matrices.
+
+
+\newpage
+
+\textbf{Problem:} Write a C program that asks the user for a file name, atempt to open the file, if it exists, return 1, print an error message, and end the program. If it doesn't exists, create a new file with that file name, print numbers 1 to 100 to the file (each number in a single line), return 0. \\
+
+\textbf{Design:} 
+\begin{lstlisting}[numbers=none]
+/* Using char, printf, and scanf, reserve a variable named filename, prompt the user for a file name, and assign it to the variable filename. */
+
+/* Reserve variable file as a FILE, attempt to open the file, use if statement to check if file != NULL, return 1 and print an error message. */
+
+/* In a else statement, free file and reopen it in writing mode, create a for loop to fprintf a number to the file from 1 to 99 and create a new line, fprintf 100 to the last line without creating a new line. */
+
+/* Close file and return 0 if all went well. */
+\end{lstlisting}
+\hfill \break
+\textbf{Complexity:} This program had a single \texttt{for} loop which repeated 99 times, thus the complexity of this algorithm was 99 + 1 extra fprintf out of the loop, O(100). This program did not have inputed matrices.
+
+
+\newpage
+
+\section{Exercise 2}
+
+\textbf{Problem:} Write a C program that asks the size of an array (min 1, max 250), check for a valid input, if valid set the value of each element of this array equal to the value of the formula provided in the lab manual, ask the user for an element of the array, check for a valid input, if valid print the value of the element retrieved. \\
+
+\textbf{Design:}
+\begin{lstlisting}[numbers=none]
+/* Retrive CheckNum function from ex\_7.c from Lab 4. Adapt the function to check if the user input an integer and also check if it is within the range [1,250], use if statement for the extra check. */
+
+/* In the main function, prompt the user for the size of the array and store it in the variable userInput. */
+
+/* Create an if statement to check if userInput is valid using CheckNum(). Else not valid, print error message and return 1. */
+
+/* Inside if, dynamically allocate an array named array to hold userInput number of floats. Using a for loop, assign each element of this array as the result of the formula provided in the lab manual. Use pow() to take values to the power. Include math.h and don't forget to use the flag -lm when compiling the code. */
+
+/* Still inside the same if, prompt the user for the element to be retrieved and store it to userInput2. Use a new if statement to check if the input is valid (using CheckNum() and checking if userInput2 <= userInput). If valid, retrieve the element value and print it. Else print error message and return 1.
+
+/* Return 0 if all went well. */
+\end{lstlisting}
+\hfill \break
+\textbf{Complexity:} This program had two \texttt{for} loops (one in the ain function and the other in the CheckNum function). The loops were not inside one another, thus the complexity of this algorithm was O(\textit{n}) (Actual value of \textit{n} depends on user inputs). This program did not have inputed matrices.
+
+
+\newpage
+
+\section{Exercise 3}
+
+\textbf{Problem:} Write a C program that prompts the user for an integer n, and outputs a file named ans.out which contains a n x n matrix such that all integers from 1 to $n^2$ are stored in the matrix following a spiral pattern as exemplified in the lab manual. \\
+
+\textbf{Design:}
+\begin{lstlisting}[numbers=none]
+/* Retrive CheckNum function from bounds.c. Change the range which the integer should be from [1, 250] to [1, 100]. */
+
+/* Create countDigits function to count how many digits an integer have, by diving the int by 10 in a while loop until it is equal to 0 (and count the number of loops). Return the count. */
+
+/* In the main function, prompt the user for the integer. Use CheckNum to check if the input is an integer within the desired range. If not, output error message and return 1. */
+
+/* If the input value is valid, assign it to int n. */
+
+/* Dynamically allocate the matrix n by n in size, as shown in Sec. 5.3.2 of the lab manual. */
+
+/* Use the algorithm provided in the lab manual to fill out the matrix. Adapt x and y origin points for odd and even n's. Assign a type and initial value to the variables to be used. Save c to the matrix position y, x. Remove s = s + 1; equation from the ''for (m from 0 to s)'' loop. Save the last c (= n^2)to the last y, x positions after the loops are done. */
+
+/* Set the number width by calling tge countDigits function on $n^2$. */
+
+/* Open file ans.out with w mode, create a for loop inside the other to print each matrix element in the desired position (following its row and column). */
+
+/* Close the file, return 0 if all went well. */
+\end{lstlisting}
+\hfill \break
+\textbf{Complexity:} Considering the \texttt{for} loop nest in the ''Printing the matrix into ans.out'' section, the time complexity os of \textit{O($n^2$)}. For the \texttt{for} loop nest in the ''Filling the matrix'' section of the code, the worst case complexity would be of \textit{O($n^3$)} since there are 3 nested \texttt{for} loops. However, that will not be the case, since only the first loop repeats n times (the other 2 inner loops will always repeat equal or (usually) less then n). To trace a direct relation between the size of the matrix n and the computation time, we need to relly on the first discussed loop nest. Since the matrix has a magnitude of $n^2$, and the ''Printing loop'' a complexity of \textit{O($n^2$)}, it is reasonable to say that the performance will grow linearly and in direct proportion with the size of the matrix.
+
+
+
+\newpage
+
+\section{Sources and Resources}
+
+\begin{flushleft}
+\begin{itemize}
+    \item{\url{https://stackoverflow.com/questions/2795382/enter-custom-file-name-to-be-read}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/46980032/read-last-line-of-a-text-file-c-programming}: Found on Google}
+    \item{\url{https://stackoverflow.com/questions/62059123/counting-the-number-of-lines-in-a-txt-file-in-c}: Found on Google}
+    \item{\url{https://ctan.mirrors.hoobly.com/info/latexcheat/latexcheat/latexsheet.pdf}: Found on Google}
+    \item{\url{https://tex.stackexchange.com/questions/121601/automatically-wrap-the-text-in-verbatim}: Found on Google}
+    \item{\url{https://www.geeksforgeeks.org/c-switch-statement/}: Found on Google}    
+\end{itemize}
+\end{flushleft}
+
+
+\end{document}
