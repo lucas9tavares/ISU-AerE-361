@@ -12,18 +12,18 @@ In compliance with the ISU Academic Misconduct Policy expectations, I will not g
 | --- | --- |
 |**Assigned on**: | Feb. 27th, 2024 |
 |**Due on**: | Mar. 5th, 2024 @ 11:00 |
-|**Accepted on**: | |
+|**Accepted on**: | Mar. 08, 2024 @ 07:15:22 PM |
 
 
 ## Grading Rubric
 
 |Deliverable | Points Awarded | Maximum Points |
 |---|---|---|
-| Midpoint | | 40 |
-| Simpson's 1/3 | | 40 |
-| Simpson's 3/8 | | 40 |
-| Gauss Quad | | 40 |
-| Total Score | | 160 |
+| Midpoint | 40 | 40 |
+| Simpson's 1/3 | 40 | 40 |
+| Simpson's 3/8 | 40 | 40 |
+| Gauss Quad | 40 | 40 |
+| Total Score | 160 | 160 |
 
 ## Introduction
 
